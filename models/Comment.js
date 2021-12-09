@@ -9,11 +9,14 @@ const ReplySchema = new Schema (
             default: () => new Types.ObjectId()
         },
         replyBody: {
-            type: String
-        },
-        writtenBy: {
-            type: String    
-        },
+            type: String,
+            required: true,
+            trim: true
+          },
+          writtenBy: {
+            type: String,
+            required: true,
+          },
         createdBy: {
             type: String,
             default: Date.now,
